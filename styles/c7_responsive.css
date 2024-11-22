@@ -1,0 +1,83 @@
+/* General Mobile Styles */
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Responsive Header */
+header {
+    text-align: center;
+    padding: 10px;
+}
+header img {
+    float: none;
+    margin: 0 auto;
+}
+/* Mobile Navigation Bar */
+.menu-btn {
+    display: none;
+    background-color: #931420;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.menu-btn:after {
+    content: '☰';
+    float: right;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    #nav_menu ul {
+        display: none; /* Hide navigation menu by default */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav_menu.mobile-active ul {
+        display: flex; /* Show navigation when active */
+    }
+
+    #nav_menu ul li a {
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+/* Responsive Layout */
+@media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    section, aside {
+        width: 100%;
+        float: none;
+        padding: 10px;
+    }
+    aside {
+        order: 2; /* Move aside below the main content */
+    }
+    article img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Footer */
+footer p {
+    text-align: center;
+    padding: 10px;
+}
